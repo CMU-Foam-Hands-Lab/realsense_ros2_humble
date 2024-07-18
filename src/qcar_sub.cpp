@@ -1,6 +1,3 @@
-//
-// Created by qin on 2/27/24.
-//
 #include <chrono>
 #include <functional>
 #include <memory>
