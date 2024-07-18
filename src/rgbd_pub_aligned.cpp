@@ -1,7 +1,3 @@
-//
-// Created by qin on 2/24/24.
-//
-
 // change the header file's name according to the ROS2 version
 #if defined(ROS2_DISTRO_HUMBLE)
 #include <cv_bridge/cv_bridge.h>
