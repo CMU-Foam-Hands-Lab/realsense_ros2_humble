@@ -6,7 +6,6 @@
 #include <filesystem>
 #include <rclcpp/rclcpp.hpp>
 
-// 根据ROS2版本更改头文件名称
 #if defined(ROS2_DISTRO_HUMBLE)
 #include <cv_bridge/cv_bridge.h>
 #else
@@ -25,7 +24,7 @@ class ImageSubscriber : public rclcpp::Node {
 public:
 ImageSubscriber(const std::string& topicName, const std::string& imageType)
 : Node("image_subscriber"), startTime_(std::chrono::high_resolution_clock::now()), imageCounter_(0) {
-// 自定义QoS配置
+
 auto qos = rclcpp::QoS(rclcpp::KeepLast(10)).best_effort().durability_volatile();
 
 RCLCPP_INFO(this->get_logger(), "Subscribing to: %s", topicName.c_str());
