@@ -10,7 +10,6 @@ project(realsense_rgbd_transport_ros2)
 #    add_compile_options(-Wall -Wextra -Wpedantic)
 #endif ()
 
-# For ROS2 Foxy
 # Check the ROS distribution
 execute_process(
         COMMAND bash -c "echo $ROS_DISTRO"
@@ -20,8 +19,8 @@ execute_process(
 # Print the ROS distribution (optional, for debugging)
 message(STATUS "ROS Distribution: ${ROS_DISTRO}")
 if (ROS_DISTRO STREQUAL "foxy")
-    message(STATUS "Detected ROS 2 Foxy")
-    add_definitions(-DROS2_DISTRO_FOXY)
+    message(STATUS "Detected ROS 2 humble")
+    add_definitions(-DROS2_DISTRO_HUMBLE)
 endif()
 
 find_package(ament_cmake REQUIRED)
